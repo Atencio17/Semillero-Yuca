@@ -12,7 +12,7 @@ class detallesDelaPlaga extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
-              'assets/mariogud.jpeg', // Reemplaza con la URL de la imagen de la plaga
+              'assets/images/mariogud.jpeg', // Reemplaza con la URL de la imagen de la plaga
               width: 200, // Ancho deseado de la imagen
               height: 200, // Alto deseado de la imagen
             ),

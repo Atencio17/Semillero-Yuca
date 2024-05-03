@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:semillero/descripcion.dart';
 
 void main() => runApp(ChatApp());
 
@@ -9,7 +10,8 @@ class ChatApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Text('Chat'),
-          backgroundColor: Color(0xFF99BC85), // Color verde especificado para el header
+          backgroundColor:
+              Color(0xFF99BC85), // Color verde especificado para el header
           actions: [
             Builder(
               builder: (context) => IconButton(
@@ -32,12 +34,14 @@ class ChatApp extends StatelessWidget {
             children: <Widget>[
               DrawerHeader(
                 decoration: BoxDecoration(
-                  color: Color(0xFF99BC85), // Utiliza el color verde para el encabezado del menú
+                  color: Color(
+                      0xFF99BC85), // Utiliza el color verde para el encabezado del menú
                 ),
                 child: Text(
                   'Opciones',
                   style: TextStyle(
-                    color: Colors.white, // Color del texto en el encabezado del menú
+                    color: Colors
+                        .white, // Color del texto en el encabezado del menú
                     fontSize: 24,
                   ),
                 ),
@@ -79,7 +83,8 @@ class _ChatScreenState extends State<ChatScreen> {
         builder: (BuildContext context) {
           return AlertDialog(
             title: Text('Error'),
-            content: Text('Escriba la descripción de la enfermedad de la planta'),
+            content:
+                Text('Escriba la descripción de la enfermedad de la planta'),
             actions: [
               TextButton(
                 onPressed: () {
@@ -94,7 +99,7 @@ class _ChatScreenState extends State<ChatScreen> {
     }
   }
 
-   void _handlePlague() {
+  void _handlePlague() {
     // Navegar a la pantalla de detalles de la plaga
     Navigator.push(
       context,
@@ -182,36 +187,6 @@ class _ChatScreenState extends State<ChatScreen> {
           ),
         ),
       ],
-    );
-  }
-}
-
-class detallesDelaPlaga extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Detalles de la Plaga'),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            // Aquí puedes colocar la imagen y la descripción de la plaga
-            Text(
-              'Detalles de la Plaga', // Placeholder para la descripción de la plaga
-              style: TextStyle(fontSize: 24),
-            ),
-            SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pop(context); // Regresar a la pantalla anterior
-              },
-              child: Text('Regresar'),
-            ),
-          ],
-        ),
-      ),
     );
   }
 }
